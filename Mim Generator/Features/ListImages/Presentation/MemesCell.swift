@@ -8,6 +8,10 @@
 import UIKit
 import SDWebImage
 
+protocol MemesCellDelegate: AnyObject {
+  func didTapItem(meme: Meme)
+}
+
 class MemesCell: UICollectionViewCell {
   static let cellID = String(describing: MemesCell.self)
   
@@ -15,9 +19,11 @@ class MemesCell: UICollectionViewCell {
     didSet {
       guard let m = model else { return }
       cellContentView.setIndicatorView()
-      cellContentView.fetchImage(with: m.url)
+      cellContentView.fetchImage(with: m.imageUrl)
     }
   }
+  
+  weak var delegate: MemesCellDelegate?
   
   lazy var cellContentView: MemesTileView = {
     let view = MemesTileView()
@@ -47,6 +53,14 @@ class MemesCell: UICollectionViewCell {
       width: 0,
       height: 0
     )
+    
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectItem))
+    cellContentView.addGestureRecognizer(tapGesture)
+  }
+  
+  @objc fileprivate func selectItem() {
+    guard let meme = self.model?.meme else { return }
+    delegate?.didTapItem(meme: meme)
   }
   
 }

@@ -26,12 +26,13 @@ enum Memes {
   
   struct ViewModel {
     struct DisplayMeme {
-      var id: String
-      var name: String
-      var url: String
-      var width: Int
-      var height: Int
-      var box_count: Int
+      var meme: Meme?
+      
+      var imageUrl: String {
+        get {
+          meme?.url ?? ""
+        }
+      }
     }
   }
   

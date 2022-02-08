@@ -21,11 +21,7 @@ class MemesCollectionViewModel {
   
   func updateDisplayMemes(memes: [Meme]) {
     let mappedMemes = memes.map {
-      Memes.ViewModel.DisplayMeme(
-        id: $0.id ?? "", name: $0.name ?? "", url: $0.url ?? "",
-        width: $0.width ?? 0, height: $0.height ?? 0,
-        box_count: $0.box_count ?? 0
-      )
+      Memes.ViewModel.DisplayMeme(meme: $0)
     }
     
     if !displayedMemes.isEmpty {
@@ -39,6 +35,7 @@ class MemesCollectionViewModel {
   func getMemes() {
     getMemesUseCase.execute(param: GetMemesParam()) { [weak self] result in
       guard let self = self else { return }
+      
       DispatchQueue.main.async {
         switch result {
         case .success(let memes):

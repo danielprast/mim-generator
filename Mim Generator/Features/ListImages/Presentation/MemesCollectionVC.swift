@@ -57,11 +57,12 @@ class MemesCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
   }
   
   @objc fileprivate func onRefresh() {
-    if refreshControl.isRefreshing {
-      return
-    }
     refreshControl.beginRefreshing()
-    viewModel.getMemes()
+    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) { [weak self] in
+      guard let self = self else { return }
+      self.viewModel.getMemes()
+    }
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -97,12 +98,20 @@ class MemesCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MemesCell.cellID, for: indexPath) as? MemesCell {
-      // Configure the cell
       cell.model = viewModel.displayedMemes[indexPath.item]
+      cell.delegate = self
       return cell
     }
     
     return UICollectionViewCell()
+  }
+  
+}
+
+extension MemesCollectionVC: MemesCellDelegate {
+  
+  func didTapItem(meme: Meme) {
+    showMimEditor(meme)
   }
   
 }
@@ -118,4 +127,14 @@ extension MemesCollectionVC: IMemesCollectionDisplayLogic {
     
   }
   
+}
+
+// MARK: - Navigation
+extension MemesCollectionVC {
+  func showMimEditor(_ meme: Meme) {
+    let detailController = MimEditorVC()
+    let destination = MimEditorNavigationController(rootViewController: detailController)
+    destination.modalPresentationStyle = .formSheet
+    present(destination, animated: true, completion: nil)
+  }
 }

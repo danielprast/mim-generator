@@ -23,8 +23,8 @@ class MemesTileView: UIView {
     let img = UIImageView(image: UIImage(named: "coffee")!)
     img.contentMode = .scaleAspectFill
     img.clipsToBounds = true
-    img.layer.borderWidth = 0.5
-    img.layer.borderColor = UIColor.mainBlue().cgColor
+    //img.layer.borderWidth = 0.5
+    //img.layer.borderColor = UIColor.mainBlue().cgColor
     return img
   }()
   
