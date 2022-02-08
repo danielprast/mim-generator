@@ -7,9 +7,10 @@
 
 import Foundation
 
-enum ListImage {
+enum Memes {
   
-  enum FetchImages {
+  enum FetchMemes {
+    
     enum Response {
       
       struct Root: Codable {

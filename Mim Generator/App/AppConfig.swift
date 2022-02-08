@@ -15,7 +15,9 @@ final class AppConfig {
   var rootViewController: UIViewController {
     get {
       UINavigationController(
-        rootViewController: MemesCollection(collectionViewLayout: UICollectionViewFlowLayout())
+        rootViewController: MemesCollection(
+          collectionViewLayout: UICollectionViewFlowLayout()
+        )
       )
     }
   }
@@ -33,13 +35,18 @@ final class AppConfig {
 // MARK: - Unit Dependencies
 extension AppConfig {
   
-  func setupDependencies() {
-    DIC.shared.register(type: BaseAPIService.self) { container in
+  func setupDependencies(dic: DICProtocol) {
+    dic.register(type: BaseAPIService.self) { container in
       return ApiService()
     }
     
-    DIC.shared.register(type: ListMemeService.self) { container in
+    // MARK: List Meme
+    dic.register(type: ListMemeService.self) { container in
       return ListMemeServiceImpl(container: container)
+    }
+    
+    dic.register(type: ListMemeRepository.self) { container in
+      return ListMemeRepositoryImpl(container: container)
     }
   }
   

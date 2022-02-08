@@ -26,6 +26,9 @@
 		20DC2CD327B24D78003D988E /* ListMemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD227B24D78003D988E /* ListMemeService.swift */; };
 		20DC2CD527B253BF003D988E /* MemesCollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD427B253BF003D988E /* MemesCollectionsViewModel.swift */; };
 		20DC2CD727B25466003D988E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD627B25466003D988E /* DIContainer.swift */; };
+		20DC2CD927B2591E003D988E /* GetMemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD827B2591E003D988E /* GetMemes.swift */; };
+		20DC2CDB27B25A6D003D988E /* ListMemeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CDA27B25A6D003D988E /* ListMemeRepository.swift */; };
+		20DC2CDD27B25D8B003D988E /* ListMemeRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CDC27B25D8B003D988E /* ListMemeRepositoryImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		20DC2CD227B24D78003D988E /* ListMemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemeService.swift; sourceTree = "<group>"; };
 		20DC2CD427B253BF003D988E /* MemesCollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollectionsViewModel.swift; sourceTree = "<group>"; };
 		20DC2CD627B25466003D988E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		20DC2CD827B2591E003D988E /* GetMemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMemes.swift; sourceTree = "<group>"; };
+		20DC2CDA27B25A6D003D988E /* ListMemeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemeRepository.swift; sourceTree = "<group>"; };
+		20DC2CDC27B25D8B003D988E /* ListMemeRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemeRepositoryImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,7 @@
 		20DC2CB827B2369C003D988E /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				20DC2CD827B2591E003D988E /* GetMemes.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 		20DC2CB927B236A3003D988E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				20DC2CDA27B25A6D003D988E /* ListMemeRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 		20DC2CBD27B23DF9003D988E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				20DC2CDC27B25D8B003D988E /* ListMemeRepositoryImplementation.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -318,16 +327,19 @@
 				20DC2CCD27B2486D003D988E /* AppConfig.swift in Sources */,
 				20DC2CB727B23673003D988E /* ListImageModel.swift in Sources */,
 				20DC2C9927B235BD003D988E /* AppDelegate.swift in Sources */,
+				20DC2CD927B2591E003D988E /* GetMemes.swift in Sources */,
 				20DC2C9B27B235BD003D988E /* SceneDelegate.swift in Sources */,
 				20DC2CC927B2443B003D988E /* Logger.swift in Sources */,
 				20DC2CC427B242F7003D988E /* BaseApiService.swift in Sources */,
 				20DC2CD127B24CB0003D988E /* Extensions.swift in Sources */,
 				20DC2CD327B24D78003D988E /* ListMemeService.swift in Sources */,
+				20DC2CDB27B25A6D003D988E /* ListMemeRepository.swift in Sources */,
 				20DC2CC227B2425E003D988E /* Errors.swift in Sources */,
 				20DC2CC727B24360003D988E /* HeaderRequestBuilder.swift in Sources */,
 				20DC2CD727B25466003D988E /* DIContainer.swift in Sources */,
 				20DC2CD527B253BF003D988E /* MemesCollectionsViewModel.swift in Sources */,
 				20DC2CBF27B23E15003D988E /* Meme.swift in Sources */,
+				20DC2CDD27B25D8B003D988E /* ListMemeRepositoryImplementation.swift in Sources */,
 				20DC2CCF27B248BC003D988E /* MemesCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
