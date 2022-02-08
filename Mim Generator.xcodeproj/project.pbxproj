@@ -13,7 +13,16 @@
 		20DC2CA027B235BD003D988E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DC2C9E27B235BD003D988E /* Main.storyboard */; };
 		20DC2CA227B235C0003D988E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DC2CA127B235C0003D988E /* Assets.xcassets */; };
 		20DC2CA527B235C0003D988E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DC2CA327B235C0003D988E /* LaunchScreen.storyboard */; };
-		20DC2CB727B23673003D988E /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CB627B23673003D988E /* Meme.swift */; };
+		20DC2CB727B23673003D988E /* ListImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CB627B23673003D988E /* ListImageModel.swift */; };
+		20DC2CBF27B23E15003D988E /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CBE27B23E15003D988E /* Meme.swift */; };
+		20DC2CC227B2425E003D988E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CC127B2425E003D988E /* Errors.swift */; };
+		20DC2CC427B242F7003D988E /* BaseApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CC327B242F7003D988E /* BaseApiService.swift */; };
+		20DC2CC727B24360003D988E /* HeaderRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CC627B24360003D988E /* HeaderRequestBuilder.swift */; };
+		20DC2CC927B2443B003D988E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CC827B2443B003D988E /* Logger.swift */; };
+		20DC2CCB27B24726003D988E /* Usecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CCA27B24726003D988E /* Usecase.swift */; };
+		20DC2CCD27B2486D003D988E /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CCC27B2486D003D988E /* AppConfig.swift */; };
+		20DC2CCF27B248BC003D988E /* MemesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CCE27B248BC003D988E /* MemesCollection.swift */; };
+		20DC2CD127B24CB0003D988E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD027B24CB0003D988E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +34,16 @@
 		20DC2CA127B235C0003D988E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20DC2CA427B235C0003D988E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20DC2CA627B235C0003D988E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20DC2CB627B23673003D988E /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		20DC2CB627B23673003D988E /* ListImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImageModel.swift; sourceTree = "<group>"; };
+		20DC2CBE27B23E15003D988E /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		20DC2CC127B2425E003D988E /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		20DC2CC327B242F7003D988E /* BaseApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiService.swift; sourceTree = "<group>"; };
+		20DC2CC627B24360003D988E /* HeaderRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderRequestBuilder.swift; sourceTree = "<group>"; };
+		20DC2CC827B2443B003D988E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		20DC2CCA27B24726003D988E /* Usecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usecase.swift; sourceTree = "<group>"; };
+		20DC2CCC27B2486D003D988E /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		20DC2CCE27B248BC003D988E /* MemesCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollection.swift; sourceTree = "<group>"; };
+		20DC2CD027B24CB0003D988E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +76,10 @@
 		20DC2C9727B235BD003D988E /* Mim Generator */ = {
 			isa = PBXGroup;
 			children = (
+				20DC2CC027B2424D003D988E /* Core */,
 				20DC2CAD27B235E4003D988E /* App */,
 				20DC2CAC27B235C5003D988E /* Features */,
-				20DC2C9827B235BD003D988E /* AppDelegate.swift */,
-				20DC2C9A27B235BD003D988E /* SceneDelegate.swift */,
 				20DC2C9C27B235BD003D988E /* ViewController.swift */,
-				20DC2C9E27B235BD003D988E /* Main.storyboard */,
-				20DC2CA127B235C0003D988E /* Assets.xcassets */,
-				20DC2CA327B235C0003D988E /* LaunchScreen.storyboard */,
-				20DC2CA627B235C0003D988E /* Info.plist */,
 			);
 			path = "Mim Generator";
 			sourceTree = "<group>";
@@ -85,6 +98,13 @@
 		20DC2CAD27B235E4003D988E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				20DC2C9E27B235BD003D988E /* Main.storyboard */,
+				20DC2CA127B235C0003D988E /* Assets.xcassets */,
+				20DC2CA327B235C0003D988E /* LaunchScreen.storyboard */,
+				20DC2CA627B235C0003D988E /* Info.plist */,
+				20DC2C9827B235BD003D988E /* AppDelegate.swift */,
+				20DC2C9A27B235BD003D988E /* SceneDelegate.swift */,
+				20DC2CCC27B2486D003D988E /* AppConfig.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -123,7 +143,9 @@
 		20DC2CB327B23645003D988E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				20DC2CB627B23673003D988E /* Meme.swift */,
+				20DC2CBD27B23DF9003D988E /* Repositories */,
+				20DC2CBC27B23DF3003D988E /* DataSource */,
+				20DC2CBB27B23DEC003D988E /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -141,6 +163,7 @@
 		20DC2CB527B2364E003D988E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				20DC2CCE27B248BC003D988E /* MemesCollection.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -162,8 +185,52 @@
 		20DC2CBA27B236AC003D988E /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				20DC2CBE27B23E15003D988E /* Meme.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		20DC2CBB27B23DEC003D988E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20DC2CB627B23673003D988E /* ListImageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20DC2CBC27B23DF3003D988E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		20DC2CBD27B23DF9003D988E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		20DC2CC027B2424D003D988E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				20DC2CC527B24351003D988E /* Networking */,
+				20DC2CC127B2425E003D988E /* Errors.swift */,
+				20DC2CC827B2443B003D988E /* Logger.swift */,
+				20DC2CCA27B24726003D988E /* Usecase.swift */,
+				20DC2CD027B24CB0003D988E /* Extensions.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		20DC2CC527B24351003D988E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				20DC2CC327B242F7003D988E /* BaseApiService.swift */,
+				20DC2CC627B24360003D988E /* HeaderRequestBuilder.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +305,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DC2C9D27B235BD003D988E /* ViewController.swift in Sources */,
-				20DC2CB727B23673003D988E /* Meme.swift in Sources */,
+				20DC2CCB27B24726003D988E /* Usecase.swift in Sources */,
+				20DC2CCD27B2486D003D988E /* AppConfig.swift in Sources */,
+				20DC2CB727B23673003D988E /* ListImageModel.swift in Sources */,
 				20DC2C9927B235BD003D988E /* AppDelegate.swift in Sources */,
 				20DC2C9B27B235BD003D988E /* SceneDelegate.swift in Sources */,
+				20DC2CC927B2443B003D988E /* Logger.swift in Sources */,
+				20DC2CC427B242F7003D988E /* BaseApiService.swift in Sources */,
+				20DC2CD127B24CB0003D988E /* Extensions.swift in Sources */,
+				20DC2CC227B2425E003D988E /* Errors.swift in Sources */,
+				20DC2CC727B24360003D988E /* HeaderRequestBuilder.swift in Sources */,
+				20DC2CBF27B23E15003D988E /* Meme.swift in Sources */,
+				20DC2CCF27B248BC003D988E /* MemesCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -372,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -391,12 +467,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M9VP242345;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mim Generator/Info.plist";
+				INFOPLIST_FILE = "Mim Generator/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,12 +495,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M9VP242345;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mim Generator/Info.plist";
+				INFOPLIST_FILE = "Mim Generator/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
