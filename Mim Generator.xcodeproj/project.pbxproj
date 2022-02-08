@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2063C5F227B26A57001E2857 /* LBTATools in Frameworks */ = {isa = PBXBuildFile; productRef = 2063C5F127B26A57001E2857 /* LBTATools */; };
+		2063C5F527B26E3A001E2857 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2063C5F427B26E3A001E2857 /* SDWebImage */; };
+		2063C5F727B291F2001E2857 /* MemesCollectionDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063C5F627B291F2001E2857 /* MemesCollectionDisplayLogic.swift */; };
 		20DC2C9927B235BD003D988E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2C9827B235BD003D988E /* AppDelegate.swift */; };
 		20DC2C9B27B235BD003D988E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2C9A27B235BD003D988E /* SceneDelegate.swift */; };
 		20DC2C9D27B235BD003D988E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2C9C27B235BD003D988E /* ViewController.swift */; };
@@ -21,7 +24,7 @@
 		20DC2CC927B2443B003D988E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CC827B2443B003D988E /* Logger.swift */; };
 		20DC2CCB27B24726003D988E /* Usecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CCA27B24726003D988E /* Usecase.swift */; };
 		20DC2CCD27B2486D003D988E /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CCC27B2486D003D988E /* AppConfig.swift */; };
-		20DC2CCF27B248BC003D988E /* MemesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CCE27B248BC003D988E /* MemesCollection.swift */; };
+		20DC2CCF27B248BC003D988E /* MemesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CCE27B248BC003D988E /* MemesCollectionVC.swift */; };
 		20DC2CD127B24CB0003D988E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD027B24CB0003D988E /* Extensions.swift */; };
 		20DC2CD327B24D78003D988E /* ListMemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD227B24D78003D988E /* ListMemeService.swift */; };
 		20DC2CD527B253BF003D988E /* MemesCollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD427B253BF003D988E /* MemesCollectionsViewModel.swift */; };
@@ -29,9 +32,12 @@
 		20DC2CD927B2591E003D988E /* GetMemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CD827B2591E003D988E /* GetMemes.swift */; };
 		20DC2CDB27B25A6D003D988E /* ListMemeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CDA27B25A6D003D988E /* ListMemeRepository.swift */; };
 		20DC2CDD27B25D8B003D988E /* ListMemeRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CDC27B25D8B003D988E /* ListMemeRepositoryImplementation.swift */; };
+		20DC2CDF27B26542003D988E /* MemesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CDE27B26542003D988E /* MemesCell.swift */; };
+		20DC2CE127B26591003D988E /* MemesTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2CE027B26591003D988E /* MemesTileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2063C5F627B291F2001E2857 /* MemesCollectionDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollectionDisplayLogic.swift; sourceTree = "<group>"; };
 		20DC2C9527B235BD003D988E /* Mim Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mim Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DC2C9827B235BD003D988E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DC2C9A27B235BD003D988E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +54,7 @@
 		20DC2CC827B2443B003D988E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		20DC2CCA27B24726003D988E /* Usecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usecase.swift; sourceTree = "<group>"; };
 		20DC2CCC27B2486D003D988E /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		20DC2CCE27B248BC003D988E /* MemesCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollection.swift; sourceTree = "<group>"; };
+		20DC2CCE27B248BC003D988E /* MemesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollectionVC.swift; sourceTree = "<group>"; };
 		20DC2CD027B24CB0003D988E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		20DC2CD227B24D78003D988E /* ListMemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemeService.swift; sourceTree = "<group>"; };
 		20DC2CD427B253BF003D988E /* MemesCollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollectionsViewModel.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 		20DC2CD827B2591E003D988E /* GetMemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMemes.swift; sourceTree = "<group>"; };
 		20DC2CDA27B25A6D003D988E /* ListMemeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemeRepository.swift; sourceTree = "<group>"; };
 		20DC2CDC27B25D8B003D988E /* ListMemeRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemeRepositoryImplementation.swift; sourceTree = "<group>"; };
+		20DC2CDE27B26542003D988E /* MemesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCell.swift; sourceTree = "<group>"; };
+		20DC2CE027B26591003D988E /* MemesTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesTileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2063C5F527B26E3A001E2857 /* SDWebImage in Frameworks */,
+				2063C5F227B26A57001E2857 /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +185,11 @@
 		20DC2CB527B2364E003D988E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				20DC2CCE27B248BC003D988E /* MemesCollection.swift */,
+				20DC2CCE27B248BC003D988E /* MemesCollectionVC.swift */,
 				20DC2CD427B253BF003D988E /* MemesCollectionsViewModel.swift */,
+				20DC2CDE27B26542003D988E /* MemesCell.swift */,
+				20DC2CE027B26591003D988E /* MemesTileView.swift */,
+				2063C5F627B291F2001E2857 /* MemesCollectionDisplayLogic.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -267,6 +280,10 @@
 			dependencies = (
 			);
 			name = "Mim Generator";
+			packageProductDependencies = (
+				2063C5F127B26A57001E2857 /* LBTATools */,
+				2063C5F427B26E3A001E2857 /* SDWebImage */,
+			);
 			productName = "Mim Generator";
 			productReference = 20DC2C9527B235BD003D988E /* Mim Generator.app */;
 			productType = "com.apple.product-type.application";
@@ -295,6 +312,10 @@
 				Base,
 			);
 			mainGroup = 20DC2C8C27B235BD003D988E;
+			packageReferences = (
+				2063C5F027B26A57001E2857 /* XCRemoteSwiftPackageReference "LBTATools" */,
+				2063C5F327B26E39001E2857 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 20DC2C9627B235BD003D988E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -327,6 +348,8 @@
 				20DC2CCD27B2486D003D988E /* AppConfig.swift in Sources */,
 				20DC2CB727B23673003D988E /* ListImageModel.swift in Sources */,
 				20DC2C9927B235BD003D988E /* AppDelegate.swift in Sources */,
+				2063C5F727B291F2001E2857 /* MemesCollectionDisplayLogic.swift in Sources */,
+				20DC2CDF27B26542003D988E /* MemesCell.swift in Sources */,
 				20DC2CD927B2591E003D988E /* GetMemes.swift in Sources */,
 				20DC2C9B27B235BD003D988E /* SceneDelegate.swift in Sources */,
 				20DC2CC927B2443B003D988E /* Logger.swift in Sources */,
@@ -340,7 +363,8 @@
 				20DC2CD527B253BF003D988E /* MemesCollectionsViewModel.swift in Sources */,
 				20DC2CBF27B23E15003D988E /* Meme.swift in Sources */,
 				20DC2CDD27B25D8B003D988E /* ListMemeRepositoryImplementation.swift in Sources */,
-				20DC2CCF27B248BC003D988E /* MemesCollection.swift in Sources */,
+				20DC2CCF27B248BC003D988E /* MemesCollectionVC.swift in Sources */,
+				20DC2CE127B26591003D988E /* MemesTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +584,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2063C5F027B26A57001E2857 /* XCRemoteSwiftPackageReference "LBTATools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bhlvoong/LBTATools";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		2063C5F327B26E39001E2857 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2063C5F127B26A57001E2857 /* LBTATools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2063C5F027B26A57001E2857 /* XCRemoteSwiftPackageReference "LBTATools" */;
+			productName = LBTATools;
+		};
+		2063C5F427B26E3A001E2857 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2063C5F327B26E39001E2857 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20DC2C8D27B235BD003D988E /* Project object */;
 }

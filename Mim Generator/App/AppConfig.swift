@@ -14,8 +14,9 @@ final class AppConfig {
   
   var rootViewController: UIViewController {
     get {
+      //PreviewController()
       UINavigationController(
-        rootViewController: MemesCollection(
+        rootViewController: MemesCollectionVC(
           collectionViewLayout: UICollectionViewFlowLayout()
         )
       )
@@ -50,4 +51,30 @@ extension AppConfig {
     }
   }
   
+}
+
+// MARK: - Preview Controller
+
+class PreviewController: UIViewController {
+  let tileView: MemesTileView = {
+    let view = MemesTileView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    return view
+  }()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    view.backgroundColor = .white
+    
+    view.addSubview(tileView)
+    
+    let width: CGFloat = (view.bounds.size.width / 3) - 6
+    
+    tileView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    tileView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    tileView.withWidth(width)
+    tileView.withHeight(width)
+    
+  }
 }
