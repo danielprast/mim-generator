@@ -10,8 +10,16 @@ import Foundation
 enum ListImage {
   
   enum FetchImages {
-    struct Response {
-      var images: [Meme]
+    enum Response {
+      
+      struct Root: Codable {
+        var data: Data?
+      }
+      
+      struct Data: Codable {
+        var memes: [Meme]
+      }
+      
     }
     
     struct ViewModel {

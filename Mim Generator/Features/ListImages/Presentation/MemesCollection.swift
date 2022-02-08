@@ -11,6 +11,8 @@ private let reuseIdentifier = "Cell"
 
 class MemesCollection: UICollectionViewController {
   
+  let viewModel = MemesCollectionViewModel()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -24,7 +26,17 @@ class MemesCollection: UICollectionViewController {
     
     title = "Meme Collection"
     
-    // Do any additional setup after loading the view.
+    let service = DIC.shared.resolve(type: ListMemeService.self)
+    service?.fetchMemes(completion: { result in
+      switch result {
+      case .success(let data):
+        Logger.inspect(key: "memes", value: "\(String(describing: data.data?.memes))")
+      case .failure(let fail):
+        print("failure: \(fail.localizedDescription)")
+      }
+    })
+    
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
