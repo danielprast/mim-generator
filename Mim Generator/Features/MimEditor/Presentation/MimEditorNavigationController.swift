@@ -9,6 +9,16 @@ import UIKit
 
 class MimEditorNavigationController: UINavigationController {
   
+  private(set) var mimEditor = MimEditor()
+  
+  func updateMeme(meme: Meme) {
+    mimEditor.meme = meme
+  }
+  
+  deinit {
+    Logger.inspect(key: "VC \(MimEditorNavigationController.self)", value: "memory claimed")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     

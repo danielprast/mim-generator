@@ -70,7 +70,7 @@ class MemesCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
     Logger.inspect(key: "VC", value: "\(MemesCollectionVC.self)")
   }
   
-  // MARK: Flow Delegate
+  // MARK: UICollectionView Flow Delegate
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = (view.frame.width - 2) / 3
     return CGSize(width: width, height: width)
@@ -84,7 +84,7 @@ class MemesCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
     return 1
   }
   
-  // MARK: UICollectionViewDataSource
+  // MARK: UICollectionView DataSource
   
   override func numberOfSections(in collectionView: UICollectionView) -> Int {
     // #warning Incomplete implementation, return the number of sections
@@ -108,6 +108,7 @@ class MemesCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
   
 }
 
+// MARK: - MemesCell Delegate
 extension MemesCollectionVC: MemesCellDelegate {
   
   func didTapItem(meme: Meme) {
@@ -116,6 +117,7 @@ extension MemesCollectionVC: MemesCellDelegate {
   
 }
 
+// MARK: - Display Logic
 extension MemesCollectionVC: IMemesCollectionDisplayLogic {
   
   func displayMemes() {
@@ -134,6 +136,7 @@ extension MemesCollectionVC {
   func showMimEditor(_ meme: Meme) {
     let detailController = MimEditorVC()
     let destination = MimEditorNavigationController(rootViewController: detailController)
+    destination.updateMeme(meme: meme)
     destination.modalPresentationStyle = .formSheet
     present(destination, animated: true, completion: nil)
   }

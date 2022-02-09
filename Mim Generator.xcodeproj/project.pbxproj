@@ -12,6 +12,14 @@
 		2063C5F727B291F2001E2857 /* MemesCollectionDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063C5F627B291F2001E2857 /* MemesCollectionDisplayLogic.swift */; };
 		2063C5FA27B2AE7C001E2857 /* MimEditorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063C5F927B2AE7C001E2857 /* MimEditorVC.swift */; };
 		2063C5FC27B2AEAD001E2857 /* MimEditorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063C5FB27B2AEAD001E2857 /* MimEditorNavigationController.swift */; };
+		2078F90227B349130037B718 /* MimEditorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2078F90127B349130037B718 /* MimEditorView.xib */; };
+		207A4A4327B2E91D006A6147 /* MimEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4227B2E91D006A6147 /* MimEditor.swift */; };
+		207A4A4727B2EB7F006A6147 /* MimePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4627B2EB7F006A6147 /* MimePreviewVC.swift */; };
+		207A4A4A27B2EC10006A6147 /* MimeShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4927B2EC0F006A6147 /* MimeShareVC.swift */; };
+		207A4A4C27B2F06F006A6147 /* MimEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4B27B2F06F006A6147 /* MimEditorViewModel.swift */; };
+		207A4A4E27B2F089006A6147 /* MimePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4D27B2F089006A6147 /* MimePreviewViewModel.swift */; };
+		207A4A5027B2F0A9006A6147 /* MimeShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4F27B2F0A9006A6147 /* MimeShareViewModel.swift */; };
+		207A4A5227B2F502006A6147 /* MimEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A5127B2F502006A6147 /* MimEditorView.swift */; };
 		20DC2C9927B235BD003D988E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2C9827B235BD003D988E /* AppDelegate.swift */; };
 		20DC2C9B27B235BD003D988E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2C9A27B235BD003D988E /* SceneDelegate.swift */; };
 		20DC2C9D27B235BD003D988E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC2C9C27B235BD003D988E /* ViewController.swift */; };
@@ -42,6 +50,14 @@
 		2063C5F627B291F2001E2857 /* MemesCollectionDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollectionDisplayLogic.swift; sourceTree = "<group>"; };
 		2063C5F927B2AE7C001E2857 /* MimEditorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimEditorVC.swift; sourceTree = "<group>"; };
 		2063C5FB27B2AEAD001E2857 /* MimEditorNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimEditorNavigationController.swift; sourceTree = "<group>"; };
+		2078F90127B349130037B718 /* MimEditorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MimEditorView.xib; sourceTree = "<group>"; };
+		207A4A4227B2E91D006A6147 /* MimEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimEditor.swift; sourceTree = "<group>"; };
+		207A4A4627B2EB7F006A6147 /* MimePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimePreviewVC.swift; sourceTree = "<group>"; };
+		207A4A4927B2EC0F006A6147 /* MimeShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeShareVC.swift; sourceTree = "<group>"; };
+		207A4A4B27B2F06F006A6147 /* MimEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimEditorViewModel.swift; sourceTree = "<group>"; };
+		207A4A4D27B2F089006A6147 /* MimePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimePreviewViewModel.swift; sourceTree = "<group>"; };
+		207A4A4F27B2F0A9006A6147 /* MimeShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeShareViewModel.swift; sourceTree = "<group>"; };
+		207A4A5127B2F502006A6147 /* MimEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimEditorView.swift; sourceTree = "<group>"; };
 		20DC2C9527B235BD003D988E /* Mim Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mim Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DC2C9827B235BD003D988E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DC2C9A27B235BD003D988E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +104,28 @@
 			children = (
 				2063C5F927B2AE7C001E2857 /* MimEditorVC.swift */,
 				2063C5FB27B2AEAD001E2857 /* MimEditorNavigationController.swift */,
+				207A4A4227B2E91D006A6147 /* MimEditor.swift */,
+				207A4A4B27B2F06F006A6147 /* MimEditorViewModel.swift */,
+				207A4A5127B2F502006A6147 /* MimEditorView.swift */,
+				2078F90127B349130037B718 /* MimEditorView.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		207A4A4527B2EB5F006A6147 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				207A4A4627B2EB7F006A6147 /* MimePreviewVC.swift */,
+				207A4A4D27B2F089006A6147 /* MimePreviewViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		207A4A4827B2EBFE006A6147 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				207A4A4927B2EC0F006A6147 /* MimeShareVC.swift */,
+				207A4A4F27B2F0A9006A6147 /* MimeShareViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -165,6 +203,7 @@
 		20DC2CB127B23616003D988E /* MimResult */ = {
 			isa = PBXGroup;
 			children = (
+				207A4A4527B2EB5F006A6147 /* Presentation */,
 			);
 			path = MimResult;
 			sourceTree = "<group>";
@@ -172,6 +211,7 @@
 		20DC2CB227B23632003D988E /* MimShare */ = {
 			isa = PBXGroup;
 			children = (
+				207A4A4827B2EBFE006A6147 /* Presentation */,
 			);
 			path = MimShare;
 			sourceTree = "<group>";
@@ -347,6 +387,7 @@
 				20DC2CA527B235C0003D988E /* LaunchScreen.storyboard in Resources */,
 				20DC2CA227B235C0003D988E /* Assets.xcassets in Resources */,
 				20DC2CA027B235BD003D988E /* Main.storyboard in Resources */,
+				2078F90227B349130037B718 /* MimEditorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207A4A4327B2E91D006A6147 /* MimEditor.swift in Sources */,
 				20DC2C9D27B235BD003D988E /* ViewController.swift in Sources */,
 				20DC2CCB27B24726003D988E /* Usecase.swift in Sources */,
 				20DC2CCD27B2486D003D988E /* AppConfig.swift in Sources */,
@@ -369,11 +411,17 @@
 				20DC2C9B27B235BD003D988E /* SceneDelegate.swift in Sources */,
 				20DC2CC927B2443B003D988E /* Logger.swift in Sources */,
 				2063C5FA27B2AE7C001E2857 /* MimEditorVC.swift in Sources */,
+				207A4A4C27B2F06F006A6147 /* MimEditorViewModel.swift in Sources */,
 				20DC2CC427B242F7003D988E /* BaseApiService.swift in Sources */,
 				20DC2CD127B24CB0003D988E /* Extensions.swift in Sources */,
+				207A4A4727B2EB7F006A6147 /* MimePreviewVC.swift in Sources */,
+				207A4A4A27B2EC10006A6147 /* MimeShareVC.swift in Sources */,
+				207A4A5227B2F502006A6147 /* MimEditorView.swift in Sources */,
 				20DC2CD327B24D78003D988E /* ListMemeService.swift in Sources */,
 				20DC2CDB27B25A6D003D988E /* ListMemeRepository.swift in Sources */,
 				20DC2CC227B2425E003D988E /* Errors.swift in Sources */,
+				207A4A4E27B2F089006A6147 /* MimePreviewViewModel.swift in Sources */,
+				207A4A5027B2F0A9006A6147 /* MimeShareViewModel.swift in Sources */,
 				20DC2CC727B24360003D988E /* HeaderRequestBuilder.swift in Sources */,
 				20DC2CD727B25466003D988E /* DIContainer.swift in Sources */,
 				20DC2CD527B253BF003D988E /* MemesCollectionsViewModel.swift in Sources */,
