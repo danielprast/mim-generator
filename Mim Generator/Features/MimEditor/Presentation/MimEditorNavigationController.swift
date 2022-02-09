@@ -15,6 +15,10 @@ class MimEditorNavigationController: UINavigationController {
     mimEditor.meme = meme
   }
   
+  func updateMimEditorState(_ state: MimEditor) {
+    mimEditor = state
+  }
+  
   deinit {
     Logger.inspect(key: "VC \(MimEditorNavigationController.self)", value: "memory claimed")
   }

@@ -13,6 +13,7 @@
 		2063C5FA27B2AE7C001E2857 /* MimEditorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063C5F927B2AE7C001E2857 /* MimEditorVC.swift */; };
 		2063C5FC27B2AEAD001E2857 /* MimEditorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063C5FB27B2AEAD001E2857 /* MimEditorNavigationController.swift */; };
 		2078F90227B349130037B718 /* MimEditorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2078F90127B349130037B718 /* MimEditorView.xib */; };
+		2078F90527B3557A0037B718 /* PhotosPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2078F90427B3557A0037B718 /* PhotosPicker.swift */; };
 		207A4A4327B2E91D006A6147 /* MimEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4227B2E91D006A6147 /* MimEditor.swift */; };
 		207A4A4727B2EB7F006A6147 /* MimePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4627B2EB7F006A6147 /* MimePreviewVC.swift */; };
 		207A4A4A27B2EC10006A6147 /* MimeShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4A4927B2EC0F006A6147 /* MimeShareVC.swift */; };
@@ -51,6 +52,7 @@
 		2063C5F927B2AE7C001E2857 /* MimEditorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimEditorVC.swift; sourceTree = "<group>"; };
 		2063C5FB27B2AEAD001E2857 /* MimEditorNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimEditorNavigationController.swift; sourceTree = "<group>"; };
 		2078F90127B349130037B718 /* MimEditorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MimEditorView.xib; sourceTree = "<group>"; };
+		2078F90427B3557A0037B718 /* PhotosPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPicker.swift; sourceTree = "<group>"; };
 		207A4A4227B2E91D006A6147 /* MimEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimEditor.swift; sourceTree = "<group>"; };
 		207A4A4627B2EB7F006A6147 /* MimePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimePreviewVC.swift; sourceTree = "<group>"; };
 		207A4A4927B2EC0F006A6147 /* MimeShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeShareVC.swift; sourceTree = "<group>"; };
@@ -110,6 +112,21 @@
 				2078F90127B349130037B718 /* MimEditorView.xib */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2078F90327B3555B0037B718 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2078F90627B356C40037B718 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2078F90427B3557A0037B718 /* PhotosPicker.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		207A4A4527B2EB5F006A6147 /* Presentation */ = {
@@ -195,6 +212,7 @@
 		20DC2CB027B23602003D988E /* MimEditor */ = {
 			isa = PBXGroup;
 			children = (
+				2078F90327B3555B0037B718 /* Domain */,
 				2063C5F827B2AE50001E2857 /* Presentation */,
 			);
 			path = MimEditor;
@@ -299,6 +317,7 @@
 		20DC2CC027B2424D003D988E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2078F90627B356C40037B718 /* UI */,
 				20DC2CC527B24351003D988E /* Networking */,
 				20DC2CC127B2425E003D988E /* Errors.swift */,
 				20DC2CC827B2443B003D988E /* Logger.swift */,
@@ -406,6 +425,7 @@
 				2063C5FC27B2AEAD001E2857 /* MimEditorNavigationController.swift in Sources */,
 				20DC2C9927B235BD003D988E /* AppDelegate.swift in Sources */,
 				2063C5F727B291F2001E2857 /* MemesCollectionDisplayLogic.swift in Sources */,
+				2078F90527B3557A0037B718 /* PhotosPicker.swift in Sources */,
 				20DC2CDF27B26542003D988E /* MemesCell.swift in Sources */,
 				20DC2CD927B2591E003D988E /* GetMemes.swift in Sources */,
 				20DC2C9B27B235BD003D988E /* SceneDelegate.swift in Sources */,

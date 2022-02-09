@@ -7,6 +7,7 @@
 
 import UIKit
 import LBTATools
+import Photos
 
 class MimEditorVC: UIViewController {
   
@@ -21,10 +22,13 @@ class MimEditorVC: UIViewController {
   }
   
   var viewModel = MimEditorViewModel()
+  let imagePickerHandler = ImagePickerHandler()
   
   var mainView: MimEditorView {
     get { view as! MimEditorView }
   }
+  
+  private(set) var navController: MimEditorNavigationController?
   
   override func loadView() {
     view = MimEditorView.loadViewFromNib()
@@ -33,12 +37,28 @@ class MimEditorVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    setupNavBar()
     mainView.backgroundColor = .greyAja()
     mainView.setupViews()
     mainView.setupGestures()
-    
-    if let _ = navigationController as? MimEditorNavigationController {
+    mainView.displayMeme(viewModel.mimEditor.meme)
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    Logger.inspect(key: "VC", value: MimEditorVC.self)
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    navController?.updateMimEditorState(viewModel.mimEditor)
+  }
+  
+  fileprivate func setupNavBar() {
+    if let navController = navigationController as? MimEditorNavigationController {
+      self.navController = navController
+      
+      viewModel.updateModel(self.navController!.mimEditor)
       
       let leftBarButton = UIBarButtonItem(
         title: "Close",
@@ -55,30 +75,51 @@ class MimEditorVC: UIViewController {
   @objc private func didTapClose() {
     navigationController?.dismiss(animated: true, completion: nil)
   }
-                                          
-  
-  lazy var button: UIButton = {
-    let btn = UIButton(type: .system)
-    btn.setTitle("Preview", for: .normal)
-    btn.addTarget(self, action: #selector(showMimePreview), for: .touchUpInside)
-    return btn
-  }()
   
   @objc private func showMimePreview() {
     let destination = MimePreviewVC()
     navigationController?.pushViewController(destination, animated: true)
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    Logger.inspect(key: "VC", value: MimEditorVC.self)
-  }
 }
 
+// MARK: - MimEditorView Delegate
 extension MimEditorVC: MimEditorViewDelegate {
   
+  func didTapNext() {
+    Logger.inspect(key: "next button", value: "joss")
+  }
+  
+  fileprivate func pickImage() {
+    imagePickerHandler.pickImage(self) { [unowned self] image in
+      self.viewModel.updateLogo(image)
+      self.mainView.displayLogo(image)
+    }
+  }
+  
   func didTapAddLogo() {
-    Logger.inspect(key: "Add logo", value: "TAP!!")
+    let photos = PHPhotoLibrary.authorizationStatus()
+    
+    switch photos {
+    case .notDetermined:
+      PHPhotoLibrary.requestAuthorization() { status in
+        if status != .authorized {
+          self.pickImage()
+        } else {
+          print("Rasidaa")
+        }
+      }
+    case .restricted:
+      break
+    case .denied:
+      break
+    case .authorized:
+      pickImage()
+    case .limited:
+      pickImage()
+    @unknown default:
+      Logger.inspect(key: "unkown", value: "...")
+    }
   }
   
   func didTapAddText() {

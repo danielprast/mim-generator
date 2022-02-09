@@ -15,12 +15,12 @@ final class AppConfig {
   var rootViewController: UIViewController {
     get {
       //PreviewController()
-//      UINavigationController(
-//        rootViewController: MemesCollectionVC(
-//          collectionViewLayout: UICollectionViewFlowLayout()
-//        )
-//      )
-      MimEditorVC()
+      //MimEditorVC()
+      UINavigationController(
+        rootViewController: MemesCollectionVC(
+          collectionViewLayout: UICollectionViewFlowLayout()
+        )
+      )
     }
   }
   
@@ -63,9 +63,9 @@ class PreviewController: UIViewController {
     return view
   }()
   
-//  override func loadView() {
-//    view = MimEditorView(frame: view.bounds)
-//  }
+  //  override func loadView() {
+  //    view = MimEditorView(frame: view.bounds)
+  //  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -77,14 +77,14 @@ class PreviewController: UIViewController {
     
     mainView.fillSuperview()
     
-//    view.addSubview(tileView)
+    //    view.addSubview(tileView)
     
-//    let width: CGFloat = (view.bounds.size.width / 3) - 6
+    //    let width: CGFloat = (view.bounds.size.width / 3) - 6
     
-//    tileView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//    tileView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//    tileView.withWidth(width)
-//    tileView.withHeight(width)
+    //    tileView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    //    tileView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    //    tileView.withWidth(width)
+    //    tileView.withHeight(width)
     
   }
 }

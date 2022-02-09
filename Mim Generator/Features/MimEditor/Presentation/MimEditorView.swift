@@ -7,10 +7,12 @@
 
 import UIKit
 import LBTATools
+import SDWebImage
 
 protocol MimEditorViewDelegate: AnyObject {
   func didTapAddLogo()
   func didTapAddText()
+  func didTapNext()
 }
 
 class MimEditorView: UIView {
@@ -53,8 +55,7 @@ class MimEditorView: UIView {
     button.setTitleColor(.white, for: .normal)
 
     button.addTarget(self, action: #selector(didTapNext), for: .touchUpInside)
-
-    button.isEnabled = false
+    
     return button
   }()
   
@@ -68,6 +69,10 @@ class MimEditorView: UIView {
     addTextView.addGestureRecognizer(addTextTapGesture)
   }
   
+  func displayLogo(_ image: UIImage?) {
+    addLogoView.logoImageView.image = image
+  }
+  
   @objc private func didTapAddLogo() {
     delegate?.didTapAddLogo()
   }
@@ -77,6 +82,9 @@ class MimEditorView: UIView {
   }
   
   func setupViews() {
+    imageView.contentMode = .scaleAspectFit
+    imageView.backgroundColor = .clear
+    
     nextButton.withHeight(44)
     
     addLogoView.setupViews()
@@ -110,9 +118,18 @@ class MimEditorView: UIView {
       .bottom(safeAreaLayoutGuide.bottomAnchor, constant: 10)
     )
   }
+
+  func displayMeme(_ meme: Meme?) {
+    if let meme = meme, let imageUrl = meme.url {
+      imageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+      imageView.sd_setImage(with: URL(string: imageUrl), completed: nil)
+    } else {
+      imageView.image = UIImage(named: "placeholderImage")
+    }
+  }
   
   @objc private func didTapNext() {
-    
+    delegate?.didTapNext()
   }
   
   static func loadViewFromNib() -> MimEditorView {
@@ -160,14 +177,18 @@ class AddLogoView: UIView {
       .trailing(trailingAnchor, constant: 5)
     )
     
-    logoImageView.backgroundColor = .yellow
-    
     logoImageView.anchor(
       .top(label.bottomAnchor, constant: 5),
       .leading(leadingAnchor, constant: 5),
       .trailing(trailingAnchor, constant: 5),
       .bottom(bottomAnchor, constant: 5)
     )
+    
+    setPlaceHolderImage()
+  }
+  
+  func setPlaceHolderImage() {
+    logoImageView.image = UIImage(named: "placeholderImage")!
   }
   
   override init(frame: CGRect) {
